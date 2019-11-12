@@ -1,7 +1,7 @@
 # the simplest configure format
 gdbstub: enabled=1, port=1234, text_base=0, data_base=0, bss_base=0
-romimage: file=/home/zhou/os/cloud-lab/labs/workstation/bochs-2.6.9/bios/BIOS-bochs-latest
-vgaromimage: file=/home/zhou/os/cloud-lab/labs/workstation/bochs-2.6.9/bios/VGABIOS-lgpl-latest
+romimage: file=../bochs-2.6.9/bios/BIOS-bochs-latest
+vgaromimage: file=../bochs-2.6.9/bios/VGABIOS-lgpl-latest
 megs: 16
 
 floppya: 1_44="Image", status=inserted

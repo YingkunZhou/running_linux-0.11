@@ -1,3 +1,4 @@
+###解压缩hdc-0.11-new.tar.xz
 ### compile the src
 make
 ### configure the .gdbinit file and modify the path to your own!!!
