@@ -1,4 +1,4 @@
-### Decompress hdc-0.11-new.tar.xz
+### Decompress .tar.xz file if you need it
 ```
 tar Jvxf hdc-0.11-new.tar.xz
 tar Jvxf rootimage-0.11.tar.xz
@@ -13,7 +13,7 @@ make
 ./setrootdev.sh Image 021d
 ./setrootdev.sh Image 0301
 ```
-### Configure the .gdbinit file and modify the path to your own home directory!!!
+### Configure the .gdbinit file and modify the path to your own home directory!!! Not elegant, can someone tell me how to avoid using this command before debug?
 ```
 echo "add-auto-load-safe-path .gdbinit" > /home/zhou/.gdbinit
 ```
@@ -33,12 +33,12 @@ lxterminal -T "gdb --quiet kernel.sym" -e "gdb --quiet kernel.sym" & ../bochs-2.
 ```
 ../qemu/qemu-system-i386 -no-kqemu -L ../qemu -m 16M -boot a -fda Image 2>/dev/null -fdb rootimage-0.11
 ../qemu/qemu-system-i386 -no-kqemu -L ../qemu -m 16M -boot a -fda Image 2>/dev/null -fdb rootimage-0.11 -s -S & gdb kernel.sym
-../qemu/qemu-system-i386 -no-kqemu -L ../qemu -m 16M -boot a -fda Image 2>/dev/null -hda hdc-0.11-new.img #  -fdb diska.img
+../qemu/qemu-system-i386 -no-kqemu -L ../qemu -m 16M -boot a -fda Image 2>/dev/null -hda hdc-0.11-new.img # -fdb diska.img
 ../qemu/qemu-system-i386 -no-kqemu -L ../qemu -m 16M -boot a -fda Image 2>/dev/null -hda hdc-0.11-new.img -s -S & gdb kernel.sym
 ```
 ### Also you can use your own system build-in qemu-system-i386 to emulate linux-0.11
 ```
 sudo # needed for -enable-kvm 
-qemu-system-i386 -m 16M -boot a -fda Image 2>/dev/null -hda hdc-0.11-new.img -enable-kvm # -fdb diska.img
+qemu-system-i386 -m 16M -boot a -fda Image 2>/dev/null -hda hdc-0.11-new.img #-enable-kvm -fdb diska.img
 qemu-system-i386 -m 16M -boot a -fda Image 2>/dev/null -hda hdc-0.11-new.img -s -S & gdb kernel.sym
 ```
