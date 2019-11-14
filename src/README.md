@@ -3,6 +3,7 @@
 tar Jvxf hdc-0.11-new.tar.xz
 tar Jvxf rootimage-0.11.tar.xz
 tar Jvxf hdc-0.11.tar.xz
+tar Jvxf diska.tar.xz
 ```
 ### Compile the src
 ```
