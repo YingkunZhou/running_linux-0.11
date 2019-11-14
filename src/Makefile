@@ -10,8 +10,8 @@ CPP	+= -Iinclude
 # This can be either FLOPPY, /dev/xxxx or empty, in which case the
 # default of hd1(0301) is used by 'build'.
 #
-#ROOT_DEV= 021d	# FLOPPY B
-#ROOT_DEV= 0301	# hd1
+# ROOT_DEV= 021d	# FLOPPY B
+# ROOT_DEV= 0301	# hd1
 
 ARCHIVES=kernel/kernel.o mm/mm.o fs/fs.o
 DRIVERS =kernel/blk_drv/blk_drv.a kernel/chr_drv/chr_drv.a

@@ -4,6 +4,8 @@ tags
 cscope.*
 bochsout.txt
 Image
-hdc-0.11-new.img
-kernel.map
-kernel.sym
+*.img
+bootsect
+setup
+*.sym
+*.map
