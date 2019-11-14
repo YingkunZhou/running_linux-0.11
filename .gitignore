@@ -9,3 +9,4 @@ bootsect
 setup
 *.sym
 *.map
+rootimage-0.11
